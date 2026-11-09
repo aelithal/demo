@@ -152,7 +152,7 @@ class LoginWindow(QWidget):
         password = self.password_input.text().strip()
 
         if not login or not password:
-            self.show_error("Ошибка", "Пожалуйста, заполните все поля!")
+            self.show_error("Ошибка", "Введите логин и пароль.")
             return
 
         try:
