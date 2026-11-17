@@ -1,10 +1,10 @@
 import configparser
 import os
 
-CONFIG_FILE = os.path.join(os.path.dirname(os.path.abpath(__file__)), 'config.ini')
+CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.ini')
 
 _parser = configparser.ConfigParser(interpolation=None)
-if not _parser.read(CONFIG_FILE, encoding="utf-8")
+if not _parser.read(CONFIG_FILE, encoding="utf-8"):
     raise FileNotFoundError(
         f'Не найден файл настроек {CONFIG_FILE}. '
         'Скопируйте config.ini.example в config.ini и укажите параметры подключения к БД.'
